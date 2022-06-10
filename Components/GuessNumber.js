@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { StyleSheet, View, Button, Text, TextInput} from 'react-native';
+import List from './List';
 
 function mapItems(items){
     return items.map((value, i) => ({kay:i.toString(), value}));
@@ -87,6 +88,8 @@ function GuessNumber(props) {
                     :
                     <Text>{message}</Text>
             }
+
+            <List data={mapItems(guessList)}/>
         </View>
     );
 }
