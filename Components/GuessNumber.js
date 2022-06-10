@@ -79,7 +79,14 @@ function GuessNumber(props) {
                 title="Probar"
                 onPress={handleOnPress}
             />
-
+            {
+                win?
+                    <Text>
+                        Felicidades, lo has adivinado en {count} intentos
+                    </Text>
+                    :
+                    <Text>{message}</Text>
+            }
         </View>
     );
 }
